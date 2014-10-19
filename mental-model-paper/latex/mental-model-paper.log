@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  19 OCT 2014 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  19 OCT 2014 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -218,7 +218,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Here is how much of TeX's memory you used:
  2264 strings out of 493117
  31903 string characters out of 6135433
- 97485 words of memory out of 5000000
+ 97492 words of memory out of 5000000
  5709 multiletter control sequences out of 15000+600000
  10143 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -230,7 +230,7 @@ ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti10.pfb>
-Output written on mental-model-paper.pdf (6 pages, 101313 bytes).
+Output written on mental-model-paper.pdf (6 pages, 101483 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream
