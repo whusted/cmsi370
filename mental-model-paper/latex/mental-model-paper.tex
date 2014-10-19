@@ -13,12 +13,41 @@
 
 \begin{document}
 \maketitle
-Abstract: This paper addresses usability issues in the world of ubiquitous computing with regards to security, authorization, and privacy. Ubiquitous computing (or ``The Internet of Things'') promises to connect everything---and everyone---to the Internet. In this paper, I argue that ubiquitous computing will initiate a paradigm shift in the way users interact with devices. Machine learning will advance to a state in which a device's effectiveness is measured by its level of autonomy. As shared devices become more prevalent, authorization will simultaneously grow in importance. Current proposed methods of better authorization will harm the usability metrics of efficiency and satisfaction. No perfect method of authentication exists; however, it is necessary that a more secure and reliable method than text passwords be invented alongside the rise of ubiquitous computing. 
+\textbf{Abstract:} This paper addresses usability issues in the world of ubiquitous computing with regards to security, authorization, and privacy. Ubiquitous computing (or ``The Internet of Things'') promises to connect everything---and everyone---to the Internet. In this paper, I argue that ubiquitous computing will initiate a paradigm shift in the way users interact with devices. Machine learning will advance to a state in which a device's effectiveness is measured by its level of autonomy. As shared devices become more prevalent, authorization will simultaneously grow in importance. Current proposed methods of better authorization will harm the usability metrics of efficiency and satisfaction. No perfect method of authentication exists; however, it is necessary that a more secure and reliable method than text passwords be invented alongside the rise of ubiquitous computing. 
 
 \section{Introduction}
 Ubiquitous computing---also known as ``The Internet of Things'' (IoT)---refers to the vision of connecting any and everything from the physical world to the digital world of the Internet. The idea is that everything not currently connected to the Internet will one day be connected. IoT would involve devices and sensors of all different varieties placed on and in physical things, from tree roots to thermostats to human hearts. Phones were some of the first devices titled as ``smart''; ubiquitous computing promises that label will reach to \textit{all} things. Beyond the physical issues that will come with ubiquitous computing---such as the energy consumption of thousands of devices---there are several usability questions accompanying the rise of IoT. In this paper, I will be looking at ubiquitous computing with regards to new interaction paradigms, as well as privacy, authentication, and security.
+
+\section{Background/Prior Work/Literature Review}
+
+Many academic articles have been published on ubiquitous computing, and a small percentage of those deal directly with privacy, authorization, and safety, and how these notions affect usability. In \textit{A Device-Centric Approach to a Safer Internet of Things}, authors Chao Chen and Sumi Helal address the issue of more and more devices causing failures as they all connect to each other. They point to four categories of risk factors that leave devices vulnerable: hostile environment, interference, misuse, and internal failures \cite{chenandhelal}. Interference deals with the issue of pervasive devices getting in the way of one another. They cite as an example that ``airplanes ban the use of cell phones to avoid interferences to avionic devices'' \cite{chenandhelal}. This modern example speaks to the broader issue of devices interference that Chen and Helal believe will gain importance as more and more devices become available in IoT.
+
+In IoT, communication and consistency across devices are essential to ensure the usability of the system. Chen and Helal address security and safety issues in their article, stating that there ``are rules pre-defined or hardcoded in the application logic'' to perform context-driven tasks like an alarm going off when a house is broken into. They believe this approach will not work in IoT because ``asking users and programmers to specify rules for each and every potential risk scenarios is not a scalable approach. It would be more desirable for systems to automatically enact devices to mitigate and eliminate risky context'' \cite{chenandhelal}. To solve this issue, they believe devices ought to become more autonomous. In a smart home, for example, they state: ``when a door is left open at night, a system should be intelligent enough to discover the door actuator and invoke the device to close the door'' \cite{chenandhelal}. This point illustrates the need for expedient communication between devices in order to remove risky context in IoT.
+
+Another article that deals with privacy, authorization, and safety in ubiquitous computing (and how these notions affect usability) is \textit{Internet of Things and Privacy Preserving Technologies} by Vladimir Oleshchuk. Location privacy is one of the primary issues that Oleshchuk addresses. He states: ``location is an important characteristic of almost any ubiquitous application since it is often considered as a contextual parameter that decision making in such applications is based on'' \cite{oleshchuk}. A user benefits from her device knowing her location, so that she may receive context-aware information. However, conflict arises because she ``would prefer not to disclose her location to protect her against tracking'' \cite{oleshchuk}. The solution, according to Oleshchuk, is to ``use secure multi-party computations and... 3-way authentication'' \cite{oleshchuk}. Using cryptography and advanced authentication, Oleshchuk believes that location privacy can be preserved in the IoT.
+
+Furthermore, Oleshchuk addresses the essential issue of access control with regards to ubiquitous computing. In a world filled with devices---some of which we may interact with only a handful of times---it is imperative that each device can make personalized decisions based on a user?s identity. Oleshchuk introduces a new approach to access control ``called privacy preserving attribute-based access control'' which ``protects user identity and enforce access control where access is based on attributes'' \cite{oleshchuk}. In other words, a user must be the sole possessor of certain attributes in order to gain access to the desired system.
+
 %\subsection{}
 
+
+
+\begin{thebibliography}{9}
+
+\bibitem{chenandhelal}
+  Chao Chen and Sumi Helal,
+  \emph{A Device-Centric Approach to a Safer Internet of Things}.
+  ACM, New York, NY,
+  2011.
+  
+  \bibitem{oleshchuk}
+  Vladimir Oleshchuk,
+  \emph{A Device-Centric Approach to a Safer Internet of Things}.
+  ACM, New York, NY,
+  2011.
+
+
+\end{thebibliography}
 
 
 \end{document}  
