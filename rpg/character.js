@@ -3,17 +3,15 @@ $(function() {
 	$("#toMenu").click(function() {
         window.location.href = "../rpg.html";
 	});
-	
-	$(function() {
-		var id = window.location.hash.substr(1);
-		$.getJSON(
-		    "http://lmu-diabolical.appspot.com/characters/" + id,
-		    function (character) {
-		        // Do something with the character.
-		        console.log(character);
-		    }
-		);
-	});
+
+	//Gets attributes and displays them on the character page.
+    $.getJSON(
+        "http://lmu-diabolical.appspot.com/characters/" + window.location.hash.substr(1),
+        function (character) {
+            // Do something with the character list.
+        	$("#name").text(character.name);
+        	$("#attributes").text("Class: " + character.classType + " - Gender: " + character.gender + " - Level: " + character.level + " - Money: " + character.money);
+    });
 
 	$("#modifyCharacter").click(function() {
         $.ajax({
