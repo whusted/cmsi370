@@ -1,6 +1,11 @@
 $(function() {
 
-	$("#getCharacterById").click(function() {
+	$("#toMenu").click(function() {
+        window.location.href = "../rpg.html";
+	});
+	
+	$(function() {
+		var id = window.location.hash.substr(1);
 		$.getJSON(
 		    "http://lmu-diabolical.appspot.com/characters/" + id,
 		    function (character) {

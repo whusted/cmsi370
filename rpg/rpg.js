@@ -33,7 +33,7 @@ $(function() {
 	        $("tbody").append(characters.map(function (character) {
 	            var tr = $(".character-template").clone();
 	            tr.find(".name").text(character.name);
-	            tr.attr("href", character.id);
+	            tr.attr("id", character.id);
 	            tr.find(".class").text(character.classType);
 	            tr.find(".gender").text(character.gender);
 	            tr.find(".level").text(character.level);
@@ -43,8 +43,10 @@ $(function() {
 	);
 
 	/* Go to character's page on click */
-	$("tbody").click(function(){
-
+	$("tbody").click(function(event) {
+		var id = $(event.target).closest("tr").attr("id");
+        console.log(id);
+        window.location.href = "character.html/#" + id;
 	});
 
 	$("#getCharacterById").click(function() {
