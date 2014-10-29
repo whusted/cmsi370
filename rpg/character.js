@@ -1,37 +1,67 @@
 $(function() {
+	var charId = window.location.hash.substr(1);
 
 	$("#toMenu").click(function() {
         window.location.href = "../rpg.html";
 	});
 
-	//Gets attributes and displays them on the character page.
+	// Gets attributes and displays them on the character page.
     $.getJSON(
-        "http://lmu-diabolical.appspot.com/characters/" + window.location.hash.substr(1),
+        "http://lmu-diabolical.appspot.com/characters/" + charId,
         function (character) {
             // Do something with the character list.
         	$("#name").text(character.name);
         	$("#attributes").text("Class: " + character.classType + " - Gender: " + character.gender + " - Level: " + character.level + " - Money: " + character.money);
     });
 
-	$("#modifyCharacter").click(function() {
+    // Get character again and populate input fields
+    $("#editChar").click(function() {
+        $.getJSON(
+	        "http://lmu-diabolical.appspot.com/characters/" + charId,
+	        function (character) {
+	            // Do something with the character list.
+	        	$("#nameInput").val(character.name);
+	        	$("#classInput").val(character.classType);
+	        	$("#genderInput").val(character.gender);
+	        	$("#levelInput").val(character.level);
+	        	$("#moneyInput").val(character.money);
+	    });
+    });
+    
+    // Make API call and reload current page to reflect changes
+    $("#editCharConfirm").click(function() {
+
+    	var newName = $("#nameInput").val();
+		var newClassType = $("#classInput").val();
+		var newGender = $("#genderInput").val();
+		var newLevel = $("#levelInput").val();
+		var newMoney = $("#moneyInput").val();
         $.ajax({
 		    type: 'PUT',
-		    url: "http://lmu-diabolical.appspot.com/characters/" + id,
+		    url: "http://lmu-diabolical.appspot.com/characters/" + charId,
 		    data: JSON.stringify({
-		        id: id,
-		        name: "Sam",
-		        classType: "rogue",
-		        gender: "MALE",
-		        level: 1,
-		        money: 0
+		        id: charId,
+		        name: newName,
+		        classType: newClassType,
+		        gender: newGender,
+		        level: newLevel,
+		        money: newMoney
 		    }),
 		    contentType: "application/json",
 		    dataType: "json",
 		    accept: "application/json",
 		    success: function (data, textStatus, jqXHR) {
 		        console.log("Done: no news is good news.");
+		        // Reload page after edit made
+		        window.location.reload();
 		    }
 		});
+
+
+    });
+
+	$("#modifyCharacter").click(function() {
+        
 	});
 
 	$("#deleteCharacter").click(function(){

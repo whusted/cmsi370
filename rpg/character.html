@@ -6,9 +6,51 @@
 		<body>
             <div class="container">
                 <button id="toMenu" class="btn btn-primary">Back to Menu</button>
-                <button id="editChar" class="btn btn-warning">Edit Character</button>
+                <button id="editChar" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
+          Edit Character
+        </button>
                 <button id="deleteChar" class="btn btn-danger">Delete Character</button>
-            
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="text-center">
+                                    <h4 class="modal-title" id="myModalLabel">Edit Character</h4>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input class="form-control" id="nameInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Class</label>
+                                        <input class="form-control" id="classInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Gender</label>
+                                        <input class="form-control" id="genderInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Level</label>
+                                        <input class="form-control" id="levelInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Money</label>
+                                        <input class="form-control" id="moneyInput">
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <button class="btn-lg btn-success" data-dismiss="modal" id="editCharConfirm">Confirm Edit Character</button>
+                                    <button class="btn-lg btn-danger" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="character">
                     <h1 id="name"></h1>
