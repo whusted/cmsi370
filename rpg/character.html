@@ -4,15 +4,36 @@
 	</head>
 	
 		<body>
-            <div class="container">
-                <button id="toMenu" class="btn btn-primary">Back to Menu</button>
-                <button id="editChar" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
-          Edit Character
-        </button>
-                <button id="deleteChar" class="btn btn-danger">Delete Character</button>
+            <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="../rpg.html">Home</a>
+                    </div>
 
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a data-toggle="modal" data-target="#helpModal">Help</a>
+                            </li>
+                            <li>
+                                <a id="editChar" data-toggle="modal" data-target="#editModal" >Edit Character</a>
+                            </li>    
+                            <li>
+                                <a id="deleteChar">Delete Character</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+            </nav>
+            <div class="container char">
                 <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -31,8 +52,11 @@
                                         <input class="form-control" id="classInput">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Gender</label>
-                                        <input class="form-control" id="genderInput">
+                                        <label>Gender</label>
+                                        <select id ="genderInput">
+                                            <option>MALE</option>
+                                            <option>FEMALE</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label>Level</label>
@@ -56,7 +80,7 @@
                     <h1 id="name"></h1>
                     <h3 id="attributes"></hr>
                 </div>
-			</div>
+            </div>
 		</body>
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
