@@ -22,6 +22,8 @@ $(function() {
 		        // The new character can be accessed from the Location header.
 		        console.log("You may access the new character at:" +
 		            jqXHR.getResponseHeader("Location"));
+		        // Reload page after new character made
+		        window.location.reload();
 		    }
 		});
 	});

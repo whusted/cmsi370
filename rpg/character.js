@@ -30,7 +30,6 @@ $(function() {
     
     // Make API call and reload current page to reflect changes
     $("#editCharConfirm").click(function() {
-
     	var newName = $("#nameInput").val();
 		var newClassType = $("#classInput").val();
 		var newGender = $("#genderInput").val();
@@ -64,14 +63,17 @@ $(function() {
         
 	});
 
-	$("#deleteCharacter").click(function(){
-        $.ajax({
-		    type: 'DELETE',
-		    url: "http://lmu-diabolical.appspot.com/characters/" + id,
-		    success: function (data, textStatus, jqXHR) {
-		        console.log("Gone baby gone.");
-		    }
-        });
+	$("#deleteChar").click(function() {
+		if (confirm("Are you sure you want to delete this character? This action can't be undone.")) {
+			$.ajax({
+			    type: 'DELETE',
+			    url: "http://lmu-diabolical.appspot.com/characters/" + charId,
+			    success: function (data, textStatus, jqXHR) {
+			        console.log("Gone baby gone.");
+			        window.location.href = "../rpg.html";
+			    }
+	        });
+		}
 	});
 
 	$("#createRandomItem").click(function(){
