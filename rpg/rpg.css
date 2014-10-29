@@ -1,5 +1,9 @@
 img.avatar {
-	height:24px;
+	height: 24px;
+}
+
+.zoomed_avatar {
+	height: 75px;
 }
 
 .char {
