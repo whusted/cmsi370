@@ -2,6 +2,10 @@ img.avatar {
 	height: 24px;
 }
 
+.blue-text {
+	color: #3366FF;
+}
+
 .zoomed_img {
 	height: 75px;
 }

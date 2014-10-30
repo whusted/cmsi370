@@ -11,7 +11,17 @@ $(function() {
         function (character) {
             // Do something with the character list.
         	$("#name").text(character.name);
-        	$("#attributes").text("Class: " + character.classType + " - Gender: " + character.gender + " - Level: " + character.level + " - Money: " + character.money);
+
+        	// If not provided, level and money should be 1 and 0, respectively
+        	var level = 1;
+        	var money = 0;
+        	if (character.level) {
+                level = character.level;
+        	}
+        	if (character.money) {
+        		money = character.money;
+        	}
+        	$("#attributes").text("Class: " + character.classType + " - Gender: " + character.gender + " - Level: " + level + " - Money: " + money);
     });
 
     // Get character again and populate input fields
@@ -79,7 +89,6 @@ $(function() {
 		        slot: "body"
 		    },
 		    function (item) {
-		    	console.log(item);
 		        $("#absorption").text(item.absorption);
 		        $("#atkspeed").text(item.atkspeed);
 		        $("#blockchance").text(item.blockchance);
