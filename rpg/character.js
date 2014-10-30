@@ -52,6 +52,7 @@ $(function() {
 		    success: function (data, textStatus, jqXHR) {
 		        console.log("Done: no news is good news.");
 		        // Reload page after edit made
+		        $("#editCharConfirm").attr("data-dismiss", "modal");
 		        window.location.reload();
 		    }
 		});

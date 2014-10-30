@@ -1,5 +1,6 @@
 $(function() {
 	$("#createCharacter").click(function() {
+		$("#loadingDots").removeClass("hidden");
 		var newName = $("#nameInput").val();
 		var newClassType = $("#classInput").val();
 		var newGender = $("#genderInput").val();
@@ -23,6 +24,8 @@ $(function() {
 		        console.log("You may access the new character at:" +
 		            jqXHR.getResponseHeader("Location"));
 		        // Reload page after new character made
+		        $("#createCharacter").attr("data-dismiss", "modal");
+
 		        window.location.reload();
 		    }
 		});
