@@ -19,7 +19,7 @@ img.avatar {
   margin-top: -50px;
   display: block;
   width: 500px;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .loader {

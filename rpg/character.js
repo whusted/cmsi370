@@ -30,6 +30,7 @@ $(function() {
     
     // Make API call and reload current page to reflect changes
     $("#editCharConfirm").click(function() {
+        $("#loadingDots").removeClass("hidden");
     	var newName = $("#nameInput").val();
 		var newClassType = $("#classInput").val();
 		var newGender = $("#genderInput").val();

@@ -1,4 +1,6 @@
 $(function() {
+	setTimeout(function() {
+	}, 1500);
 	$("#createCharacter").click(function() {
 		$("#loadingDots").removeClass("hidden");
 		var newName = $("#nameInput").val();
