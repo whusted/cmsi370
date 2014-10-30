@@ -43,7 +43,16 @@ $(function() {
 	            tr.attr("id", character.id);
 	            tr.find(".class").text(character.classType);
 	            tr.find(".gender").text(character.gender);
-	            tr.find(".level").text(character.level);
+	            if (character.level) {
+	                tr.find(".level").text(character.level);
+	            } else {
+	            	tr.find(".level").text("1");
+	            }
+	            if (character.money) {
+	            	tr.find(".money").text(character.money);
+	            } else {
+	            	tr.find(".money").text("0");
+	            }
 	            return tr;
 	        }));
 	    }

@@ -57,21 +57,18 @@ $(function() {
 		        window.location.reload();
 		    }
 		});
-
-
     });
 
 	$("#deleteChar").click(function() {
-		if (confirm("Are you sure you want to delete this character? This action can't be undone.")) {
-			$.ajax({
-			    type: 'DELETE',
-			    url: "http://lmu-diabolical.appspot.com/characters/" + charId,
-			    success: function (data, textStatus, jqXHR) {
-			        console.log("GG");
-			        window.location.href = "../rpg.html";
-			    }
-	        });
-		}
+		$("#loadingDots").removeClass("hidden");
+		$.ajax({
+		    type: 'DELETE',
+		    url: "http://lmu-diabolical.appspot.com/characters/" + charId,
+		    success: function (data, textStatus, jqXHR) {
+		        console.log("GG");
+		        window.location.href = "../rpg.html";
+		    }
+        });
 	});
 
 	$("#spawnItem").click(function() {
@@ -90,8 +87,6 @@ $(function() {
 		        $("#defense").text(item.defense);
 		    }
 		);
-
 	});
-
 
 });
