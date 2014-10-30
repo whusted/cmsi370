@@ -2,7 +2,7 @@ $(function() {
 	var charId = window.location.hash.substr(1);
 
 	$("#toMenu").click(function() {
-        window.location.href = "../rpg.html";
+        window.location.href = "rpg.html";
 	});
 
 	// Gets attributes and displays them on the character page.
@@ -76,7 +76,7 @@ $(function() {
 		    url: "http://lmu-diabolical.appspot.com/characters/" + charId,
 		    success: function (data, textStatus, jqXHR) {
 		        console.log("GG");
-		        window.location.href = "../rpg.html";
+		        window.location.href = "rpg.html";
 		    }
         });
 	});

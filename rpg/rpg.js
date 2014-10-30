@@ -62,7 +62,7 @@ $(function() {
 	$("tbody").click(function(event) {
 		var id = $(event.target).closest("tr").attr("id");
         console.log(id);
-        window.location.href = "character.html/#" + id;
+        window.location.href = "character.html#" + id;
 	});
 
 	$("#getCharacterById").click(function() {
