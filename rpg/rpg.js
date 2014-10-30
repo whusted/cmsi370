@@ -1,6 +1,16 @@
 $(function() {
-	setTimeout(function() {
-	}, 1500);
+	$("#newChar").click(function(){
+        $.getJSON(
+		    "http://lmu-diabolical.appspot.com/characters/spawn",
+		    function (character) {
+		        $("#nameInput").val(character.name);
+	        	$("#classInput").val(character.classType);
+	        	$("#genderInput").val(character.gender);
+	        	$("#levelInput").val(character.level);
+	        	$("#moneyInput").val(character.money);
+		    }
+		);
+	});
 	$("#createCharacter").click(function() {
 		$("#loadingDots").removeClass("hidden");
 		var newName = $("#nameInput").val();
