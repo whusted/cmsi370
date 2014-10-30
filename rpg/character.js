@@ -61,24 +61,20 @@ $(function() {
 
     });
 
-	$("#modifyCharacter").click(function() {
-        
-	});
-
 	$("#deleteChar").click(function() {
 		if (confirm("Are you sure you want to delete this character? This action can't be undone.")) {
 			$.ajax({
 			    type: 'DELETE',
 			    url: "http://lmu-diabolical.appspot.com/characters/" + charId,
 			    success: function (data, textStatus, jqXHR) {
-			        console.log("Gone baby gone.");
+			        console.log("GG");
 			        window.location.href = "../rpg.html";
 			    }
 	        });
 		}
 	});
 
-	$("#createRandomItem").click(function(){
+	$("#spawnItem").click(function() {
         $.getJSON(
 		    "http://lmu-diabolical.appspot.com/items/spawn",
 		    {
@@ -86,8 +82,12 @@ $(function() {
 		        slot: "body"
 		    },
 		    function (item) {
-		        // Mmmmm, new item.
-		        console.log(item);
+		    	console.log(item);
+		        $("#absorption").text(item.absorption);
+		        $("#atkspeed").text(item.atkspeed);
+		        $("#blockchance").text(item.blockchance);
+		        $("#critchance").text(item.critchance);
+		        $("#defense").text(item.defense);
 		    }
 		);
 

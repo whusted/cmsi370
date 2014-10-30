@@ -20,17 +20,20 @@
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a id="editChar" data-toggle="modal" data-target="#editModal" >Edit Character</a>
+                                <a id="editChar" data-toggle="modal" data-target="#editModal">Edit Character</a>
                             </li>    
                             <li>
                                 <a id="deleteChar">Delete Character</a>
+                            </li>
+                            <li>
+                                <a id="spawnItem" data-toggle="modal" data-target="#itemModal">Spawn Random Item</a>
                             </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
             </nav>
             <div class="container padded">
-                <!-- Modal -->
+                <!-- Edit Character Modal -->
                 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -74,9 +77,50 @@
                     </div>
                 </div>
 
+                <!-- New Item Modal -->
+                <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="text-center">
+                                    <h4 class="modal-title" id="myModalLabel">Item Created</h4>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <img src="http://www.clker.com/cliparts/a/7/c/6/1194989442932416363sword_01.svg" class="text-center zoomed_img">
+                                    <div class="form-group">
+                                        <label>Absorption</label>
+                                        <div class="form-control" id="absorption"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Attack Speed</label>
+                                        <div class="form-control" id="atkspeed"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Block Chance</label>
+                                        <div class="form-control" id="blockchance"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Critical Chance</label>
+                                        <div class="form-control" id="critchance"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Defense</label>
+                                        <div class="form-control" id="defense"></div>
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <button class="btn-lg btn-danger" data-dismiss="modal">Dismiss</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="character">
                     <!-- Dummy image for avatar -->
-                    <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Black-Widow-icon.png" class="zoomed_avatar"/>
+                    <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Black-Widow-icon.png" class="zoomed_img"/>
                     <h1 id="name"></h1>
                     <h3 id="attributes"></hr>
                 </div>

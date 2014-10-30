@@ -87,7 +87,7 @@ $(function() {
 		});
 	});
 
-	$("#deleteCharacter").click(function(){
+	$("#deleteCharacter").click(function() {
         $.ajax({
 		    type: 'DELETE',
 		    url: "http://lmu-diabolical.appspot.com/characters/" + id,
@@ -96,24 +96,5 @@ $(function() {
 		    }
         });
 	});
-
-	$("#createRandomItem").click(function(){
-        $.getJSON(
-		    "http://lmu-diabolical.appspot.com/items/spawn",
-		    {
-		        level: 50,
-		        slot: "body"
-		    },
-		    function (item) {
-		        // Mmmmm, new item.
-		        console.log(item);
-		    }
-		);
-
-	});
-
-
-
-
 
 });
