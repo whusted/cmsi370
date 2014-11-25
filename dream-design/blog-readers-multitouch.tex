@@ -6,6 +6,8 @@
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
 
 \title{Adapting Blog Readers for Multitouch}
 \author{Willy Husted and Jackson Souza}
@@ -51,7 +53,15 @@ Through the research, it is apparent that the sought after difference between pa
 \subsubsection{Post Navigation}
 The other main type of navigation between the apps is where the user selects their article to read. Strikingly similar to web based RSS readers, these views were comprised of a list, with Newsify being the most cluttered. Feedly opts for a single column list, including (like the others) the title, a photo, and small excerpt of an article, which then needs to be selected by a user. Alternatives for navigating through a collection of text are not usually found within longform devices. The closest counterpart would be a table of contents or search function in an e-reader.
 
-Regardless of the interface, writing is often divided into sections and those sections are made easily accessible by a representation as a list. Because there is not necessarily any issue with this design, we reiterated it in our dream layout. Combining the features from Feedly (not cluttered, endless list) and Flipboard (large list items) in our design allows the user to quickly find an article to read, with a full width list, large excerpts and minimal clutter. Endless vertical scrolling allows the user to skip large parts of the list, a feature that was deemed desirable in the previous section.
+Regardless of the interface, writing is often divided into sections and those sections are made easily accessible by a representation as a list. Because there is not necessarily any issue with this design, we reiterated it in our dream layout. Combining the features from Feedly (not cluttered, endless list) and Flipboard (large list items) in our design allows the user to quickly find an article to read, with a full width list, large excerpts and minimal clutter. Endless vertical scrolling \ref{fig:endless-scroll} allows the user to skip large parts of the list, a feature that was deemed desirable in the previous section.
+
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{Endless-List.jpg}
+    \caption{Endless Vertical Scrolling}
+    \label{fig:endless-scroll}
+\end{figure}
+
 
 \subsection{Content Discovery}
 All of the apps presented interesting ways to discover new content, which was then featured on the ``post navigation'' list. Feedly and Flipboard present the user with a Twitter-like hashtag system. In this system, the user indicates (via text input) his or her interests, or, alternatively, selects categories that he or she might be interested in. In dedicated devices, similar linkage to other resources would only be found in an index or bibliography. Even then, the resources would be restricted to the subject matter contained in the work.
@@ -61,9 +71,17 @@ Mitigating text input and an ``index-like'' list were our primary concerns in ou
 In our design, we thought that the act of accessing new content  should be developed in a similar vein, where the user is able to indicate words that corresponds to his or her interests. This is done inside the article view with a pinch gesture on the specific word or phrase. The user can also ``zoom'' or reverse pinch to negate words and indicate topics they do not want represented in their recommended reading.
 
 \subsection{Saving}
-The equivalent to ``dog-earring'' a page in multitouch blog readers is when a user adds a post or article to a personal ``collection''. The user is then able to access the article or text clipping at any time by navigating to his or her collection. A feature unique to Flipboard is that this collection optionally becomes public as a ``Magazine''. In the article view, this action is usually represented by a ``Bookmark button''.
+The equivalent to ``dog-earring'' \ref{fig:dog-earring} a page in multitouch blog readers is when a user adds a post or article to a personal ``collection''. The user is then able to access the article or text clipping at any time by navigating to his or her collection. A feature unique to Flipboard is that this collection optionally becomes public as a ``Magazine''. In the article view, this action is usually represented by a ``Bookmark button''.
 
-Dog-earring specifically was brought up again and again as a hallmark feature of what makes a book's interactivity so satisfying to a user. Rosner et al make the following observation about bookmarking: ``Changing material properties of objects can take advantage of our tactile memory, or subtly draw attention to an object, helping people find information more easily. [ A developer should] provide ways for users to temporarily alter the physical medium of an interface.'' (Rosner 3407) The corollary to the dog-ear in shortform is the bookmark. Our gesture-centric implementation of bookmarking reiterates the dog-ear, dragging with one finger from the top right to save a page and with two fingers to save an article.
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{dog-ear.jpg}
+    \caption{Dog-Earring}
+    \label{fig:dog-earring}
+\end{figure}
+
+
+Dog-earring specifically was brought up again and again as a hallmark feature of what makes a book's interactivity so satisfying to a user. Rosner et al make the following observation about bookmarking: ``Changing material properties of objects can take advantage of our tactile memory, or subtly draw attention to an object, helping people find information more easily. [A developer should] provide ways for users to temporarily alter the physical medium of an interface.'' (Rosner 3407) The corollary to the dog-ear in shortform is the bookmark. Our gesture-centric implementation of bookmarking reiterates the dog-ear, dragging with one finger from the top right to save a page and with two fingers to save an article.
 
 \subsection{Sharing}
 Flipboard's ``Magazine'' represents a community-centric way to share reading lists with the added option of exporting an article or the list as a whole to social media. Feedly and Newsify opt for a ``Share with [social media, email]'' button. Content sharing is a function unique to multifunction devices. In our design, we sought to mimic Flipboard in merging the bookmark and share functions. Every dog-ear a user makes is saved to his or her collection, and, similar to Flipboard's Magazine, that saved content is then made public. Direct social media sharing of an article or quote removes from the immersion of the material, so we sought to design a hands-off way to share.
