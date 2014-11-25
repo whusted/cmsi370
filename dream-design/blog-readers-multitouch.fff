@@ -1,0 +1,48 @@
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{Flip-1.jpg}
+    \caption{Single Finger Flip}
+    \label{fig:Flip-1}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{Flip-2.jpg}
+    \caption{Three Finger Rifling}
+    \label{fig:Flip-2}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{Saving-Pinches.jpg}
+    \caption{Pinch To Save}
+    \label{fig:Saving-Pinches}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{Endless-List.jpg}
+    \caption{Endless Vertical Scrolling}
+    \label{fig:endless-scroll}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{dog-ear.jpg}
+    \caption{Dog-Earring}
+    \label{fig:dog-earring}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[scale=0.3]{apple-skeu.png}
+    \caption{Skeumorphism}
+    \label{fig:apple-skeu}
+\end{figure}
+\efloatseparator
+ 

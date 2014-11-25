@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  24 NOV 2014 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  24 NOV 2014 19:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -94,21 +94,28 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/endfloat/endfloat.sty
+Package: endfloat 2011/12/25 v2.5d LaTeX2e package puts figures and tables at e
+nd (jdm)
+\c@postfigure=\count91
+\efloat@postfff=\write3
+\@ef@fffopen=\count92
+)
 (./blog-readers-multitouch.aux)
 \openout1 = `blog-readers-multitouch.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -146,16 +153,16 @@ LaTeX Font Info:    ... okay on input line 16.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
+\scratchcounter=\count93
 \scratchdimen=\dimen113
 \scratchbox=\box26
-\nofMPsegments=\count92
-\nofMParguments=\count93
+\nofMPsegments=\count94
+\nofMParguments=\count95
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count94
+\MPscratchCnt=\count96
 \MPscratchDim=\dimen114
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
 \everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -201,83 +208,114 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
 
-LaTeX Warning: Citation `Lee' on page 1 undefined on input line 24.
-
-[1
-
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3]
-
-LaTeX Warning: Reference `fig:endless-scroll' on page 4 undefined on input line
- 56.
-
-<images/Endless-List.jpg, id=18, 601.24625pt x 1003.75pt>
-File: images/Endless-List.jpg Graphic file (type jpg)
-
-<use images/Endless-List.jpg>
-Package pdftex.def Info: images/Endless-List.jpg used on input line 60.
-(pdftex.def)             Requested size: 180.37526pt x 301.12732pt.
-
-
-LaTeX Warning: Reference `fig:dog-earring' on page 4 undefined on input line 74
-.
-
-[4] <images/dog-ear.jpg, id=22, 589.20125pt x 839.135pt>
-File: images/dog-ear.jpg Graphic file (type jpg)
-
-<use images/dog-ear.jpg>
-Package pdftex.def Info: images/dog-ear.jpg used on input line 78.
-(pdftex.def)             Requested size: 176.76173pt x 251.74243pt.
- [5 <./images/Endless-List.jpg>] [6 <./images/dog-ear.jpg>] [7]
-
-LaTeX Warning: Citation `Kwon' on page 8 undefined on input line 111.
-
-
-LaTeX Warning: Citation `Kwon' on page 8 undefined on input line 112.
-
-[8] [9]
-Overfull \hbox (2.20535pt too wide) in paragraph at lines 121--122
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4] [5]
+[6] [7]
+Overfull \hbox (2.20535pt too wide) in paragraph at lines 109--110
 \OT1/cmr/m/n/10.95 We fore-see sat-is-fac-tion as one of the strongest met-rics
  of our up-dated e-reader. A widespread
  []
 
-[10] (./blog-readers-multitouch.aux)
+[8]
+\openout3 = `blog-readers-multitouch.fff'.
 
-LaTeX Warning: There were undefined references.
+ (blog-readers-multitouch.fff)
+AED endfloat: Processing end Figures and Tables [9]
+(./blog-readers-multitouch.lof)
+\tf@lof=\write4
+\openout4 = `blog-readers-multitouch.lof'.
 
+ [10
+
+
+] (./blog-readers-multitouch.fff
+<images/Flip-1.jpg, id=40, 587.19376pt x 844.15375pt>
+File: images/Flip-1.jpg Graphic file (type jpg)
+ <use images/Flip-1.jpg>
+Package pdftex.def Info: images/Flip-1.jpg used on input line 3.
+(pdftex.def)             Requested size: 176.15948pt x 253.24808pt.
+
+[11
+
+ <./images/Flip-1.jpg>] <images/Flip-2.jpg, id=44, 601.24625pt x 851.18pt>
+File: images/Flip-2.jpg Graphic file (type jpg)
+
+<use images/Flip-2.jpg>
+Package pdftex.def Info: images/Flip-2.jpg used on input line 11.
+(pdftex.def)             Requested size: 180.37526pt x 255.35596pt.
+ [12
+
+ <./images/Flip-2.jpg>]
+<images/Saving-Pinches.jpg, id=48, 589.20125pt x 838.13126pt>
+File: images/Saving-Pinches.jpg Graphic file (type jpg)
+
+<use images/Saving-Pinches.jpg>
+Package pdftex.def Info: images/Saving-Pinches.jpg used on input line 19.
+(pdftex.def)             Requested size: 176.76173pt x 251.44131pt.
+ [13
+
+ <./images/Saving-Pinches.jpg>]
+<images/Endless-List.jpg, id=53, 601.24625pt x 1003.75pt>
+File: images/Endless-List.jpg Graphic file (type jpg)
+
+<use images/Endless-List.jpg>
+Package pdftex.def Info: images/Endless-List.jpg used on input line 27.
+(pdftex.def)             Requested size: 180.37526pt x 301.12732pt.
+ [14
+
+ <./images/Endless-List.jpg>]
+<images/dog-ear.jpg, id=57, 589.20125pt x 839.135pt>
+File: images/dog-ear.jpg Graphic file (type jpg)
+ <use images/dog-ear.jpg>
+Package pdftex.def Info: images/dog-ear.jpg used on input line 35.
+(pdftex.def)             Requested size: 176.76173pt x 251.74243pt.
+
+[15
+
+ <./images/dog-ear.jpg>]
+<images/apple-skeu.png, id=61, 1027.84pt x 798.985pt>
+File: images/apple-skeu.png Graphic file (type png)
+
+<use images/apple-skeu.png>
+Package pdftex.def Info: images/apple-skeu.png used on input line 43.
+(pdftex.def)             Requested size: 308.35437pt x 239.69734pt.
+ [16
+
+ <./images/apple-skeu.png>])
+(./blog-readers-multitouch.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2276 strings out of 493117
- 32195 string characters out of 6135433
- 97488 words of memory out of 5000000
- 5717 multiletter control sequences out of 15000+600000
- 10758 words of font info for 40 fonts, out of 8000000 for 9000
+ 2468 strings out of 493117
+ 35225 string characters out of 6135433
+ 100309 words of memory out of 5000000
+ 5894 multiletter control sequences out of 15000+600000
+ 12006 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,26p,1400b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,26p,1400b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on blog-readers-multitouch.pdf (10 pages, 274369 bytes).
+Output written on blog-readers-multitouch.pdf (16 pages, 1025524 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
