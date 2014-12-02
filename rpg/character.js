@@ -1,7 +1,7 @@
-$(function() {
+$(function() { // JD: 9
 	var charId = window.location.hash.substr(1);
 
-	$("#toMenu").click(function() {
+	$("#toMenu").click(function() { // JD: 9
         window.location.href = "rpg.html";
 	});
 
@@ -22,7 +22,7 @@ $(function() {
         		money = character.money;
         	}
         	$("#attributes").text("Class: " + character.classType + " - Gender: " + character.gender + " - Level: " + level + " - Money: " + money);
-    });
+    }); // JD: 5
 
     // Get character again and populate input fields
     $("#editChar").click(function() {
@@ -30,6 +30,7 @@ $(function() {
 	        "http://lmu-diabolical.appspot.com/characters/" + charId,
 	        function (character) {
 	            // Do something with the character list.
+                // JD: 10
 	        	$("#nameInput").val(character.name);
 	        	$("#classInput").val(character.classType);
 	        	$("#genderInput").val(character.gender);
@@ -39,7 +40,7 @@ $(function() {
     });
     
     // Make API call and reload current page to reflect changes
-    $("#editCharConfirm").click(function() {
+    $("#editCharConfirm").click(function() { // JD: 9
         $("#loadingDots").removeClass("hidden");
     	var newName = $("#nameInput").val();
 		var newClassType = $("#classInput").val();
@@ -64,12 +65,12 @@ $(function() {
 		        console.log("Done: no news is good news.");
 		        // Reload page after edit made
 		        $("#editCharConfirm").attr("data-dismiss", "modal");
-		        window.location.reload();
+		        window.location.reload(); // JD: 1
 		    }
 		});
     });
 
-	$("#deleteChar").click(function() {
+	$("#deleteChar").click(function() { // JD: 3
 		$("#loadingDots").removeClass("hidden");
 		$.ajax({
 		    type: 'DELETE',
@@ -89,6 +90,7 @@ $(function() {
 		        slot: "body"
 		    },
 		    function (item) {
+                // JD: 10
 		        $("#absorption").text(item.absorption);
 		        $("#atkspeed").text(item.atkspeed);
 		        $("#blockchance").text(item.blockchance);

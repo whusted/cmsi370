@@ -1,5 +1,5 @@
 img.avatar {
-	height: 24px;
+	height: 24px; /* JD: 3 */
 }
 
 .blue-text {
@@ -15,6 +15,7 @@ img.avatar {
 }
 
 .container2 {
+    /* JD: 5 */
   position: absolute;
   top: 50%;
   left: 50%;

@@ -1,8 +1,9 @@
 $(function() {
-	$("#newChar").click(function(){
+	$("#newChar").click(function(){ // JD: 9
         $.getJSON(
 		    "http://lmu-diabolical.appspot.com/characters/spawn",
 		    function (character) {
+                // JD: 10
 		        $("#nameInput").val(character.name);
 	        	$("#classInput").val(character.classType);
 	        	$("#genderInput").val(character.gender);
@@ -11,7 +12,7 @@ $(function() {
 		    }
 		);
 	});
-	$("#createCharacter").click(function() {
+	$("#createCharacter").click(function() { // JD: 9
 		$("#loadingDots").removeClass("hidden");
 		var newName = $("#nameInput").val();
 		var newClassType = $("#classInput").val();
@@ -38,7 +39,7 @@ $(function() {
 		        // Reload page after new character made
 		        $("#createCharacter").attr("data-dismiss", "modal");
 
-		        window.location.reload();
+		        window.location.reload(); // JD: 1
 		    }
 		});
 	});
@@ -53,12 +54,12 @@ $(function() {
 	            tr.attr("id", character.id);
 	            tr.find(".class").text(character.classType);
 	            tr.find(".gender").text(character.gender);
-	            if (character.level) {
+	            if (character.level) { // JD: 11, 12
 	                tr.find(".level").text(character.level);
 	            } else {
 	            	tr.find(".level").text("1");
 	            }
-	            if (character.money) {
+	            if (character.money) { // JD: 11, 12
 	            	tr.find(".money").text(character.money);
 	            } else {
 	            	tr.find(".money").text("0");
@@ -80,11 +81,13 @@ $(function() {
 		    "http://lmu-diabolical.appspot.com/characters/" + id,
 		    function (character) {
 		        // Do something with the character.
+                // JD: 13
 		        console.log(character);
 		    }
 		);
 	});
 
+    // JD: Oh I get it...*you're not using these anymore* ... in which case: 14
 	$("#modifyCharacter").click(function() {
         $.ajax({
 		    type: 'PUT',
@@ -106,6 +109,7 @@ $(function() {
 		});
 	});
 
+    // JD: 14
 	$("#deleteCharacter").click(function() {
         $.ajax({
 		    type: 'DELETE',
