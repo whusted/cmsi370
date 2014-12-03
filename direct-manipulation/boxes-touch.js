@@ -69,7 +69,10 @@ $(function() {
                         left: touch.pageX - touch.target.deltaX,
                         top: touch.pageY - touch.target.deltaY
                     });
+
+                    // Check if outside drawing area and should be deleted
                 }
+
 
                 var calculateY = function () {
                     if (touch.pageY < cacheEnter.initialY) {

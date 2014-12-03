@@ -16,3 +16,9 @@
     -moz-box-shadow: 0px 0px 6px #88F;
     -webkit-box-shadow: 0px 0px 6px #88F;
 }
+
+.delete-highlight {
+    box-shadow: 0px 0px 6px #FF3333;
+    -moz-box-shadow: 0px 0px 6px #FF3333;
+    -webkit-box-shadow: 0px 0px 6px #FF3333;
+}
