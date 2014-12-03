@@ -1,5 +1,6 @@
 $(function() {
-    var BoxesTouch = {
+    var boxCache = {};
+    window.BoxesTouch = {
         /**
          * Sets up the given jQuery collection as the drawing area(s).
          */
@@ -11,6 +12,7 @@ $(function() {
                 // Event handler setup must be low-level because jQuery
                 // doesn't relay touch-specific event properties.
                 .each(function (index, element) {
+                    element.addEventListener("touchstart", BoxesTouch.startMake, false)
                     element.addEventListener("touchmove", BoxesTouch.trackDrag, false);
                     element.addEventListener("touchend", BoxesTouch.endDrag, false);
                 })
@@ -21,6 +23,32 @@ $(function() {
                 });
         },
 
+        startMake: function (event) {
+            $.each(event.changedTouches, function(index, touch) {
+                var boxTemplate = '<div class="box"></div>';
+                var cacheEnter = {};
+                boxCache[touch.identifier] = cacheEnter;
+
+                cacheEnter.initialX = touch.pageX;
+                cacheEnter.initialY = touch.pageY;
+
+                var createdBox = $(boxTemplate).css({
+                        width: "0px",
+                        height: "0px",
+                        left: touch.pageX + "px",
+                        top: touch.pageY + "px"
+                    });
+                $("#drawing-area").append(createdBox);
+                cacheEnter.creation = $("div div:last-child");
+                cacheEnter.creation.addClass("creation-highlight");
+                $("#drawing-area").find("div.box").each(function (index, element) {
+                    element.addEventListener("touchstart", BoxesTouch.startMove, false);
+                    element.addEventListener("touchend", BoxesTouch.unhighlight, false);
+                });
+            });
+            event.stopPropagation();
+        },
+
         /**
          * Tracks a box as it is rubberbanded or moved across the drawing area.
          */
@@ -29,12 +57,13 @@ $(function() {
                 // Don't bother if we aren't tracking anything.
                 if (touch.target.movingBox) {
                     var parentOfBox = $(touch.target.movingBox).parent(),
-                        parentWidth = boxParent.width(),
-                        parentHeight = boxParent.height();
-                        parentLeft = boxParent.offset().left,
-                        parentTop = boxParent.offset().top,
+                        parentWidth = parentOfBox.width(),
+                        parentHeight = parentOfBox.height();
+                        parentLeft = parentOfBox.offset().left,
+                        parentTop = parentOfBox.offset().top,
                         parentRight = parentLeft + parentWidth,
                         parentBottom = parentTop + parentHeight;
+                    
                     // Reposition the object.
                     touch.target.movingBox.offset({
                         left: touch.pageX - touch.target.deltaX,
