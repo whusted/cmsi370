@@ -70,6 +70,41 @@ $(function() {
                         top: touch.pageY - touch.target.deltaY
                     });
                 }
+
+                var cacheEnter = boxCache[touch.identifier];
+                if (cacheEnter && cacheEnter.creation) {
+                    var createLeft, createTop, createWidth, createHeight;
+
+                    if (touch.pageX < cacheEnter.initialX) {
+                        createLeft = touch.pageX;
+                        createWidth = cacheEnter.initialX - touch.pageX;
+                        if (touch.pageY < cacheEnter.initialY) {
+                        createTop = touch.pageY;
+                        createHeight = cacheEnter.initialY - touch.pageY;
+                    } else {
+                        createTop = cacheEnter.initialY;
+                        createHeight = touch.pageY - cacheEnter.initialY;
+                    }
+                    } else {
+                        createLeft = cacheEnter.initialX;
+                        createWidth = touch.pageX - cacheEnter.initialX;
+                        if (touch.pageY < cacheEnter.initialY) {
+                        createTop = touch.pageY;
+                        createHeight = cacheEnter.initialY - touch.pageY;
+                    } else {
+                        createTop = cacheEnter.initialY;
+                        createHeight = touch.pageY - cacheEnter.initialY;
+                    }
+                    }
+
+                    cacheEnter.creation
+                        .offset({
+                            left: createLeft,
+                            top: createTop
+                        })
+                        .width(createWidth)
+                        .height(createHeight);
+                }
             });
             
             // Don't do any touch scrolling.
