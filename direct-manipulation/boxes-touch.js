@@ -71,6 +71,16 @@ $(function() {
                     });
                 }
 
+                var calculateY = function () {
+                    if (touch.pageY < cacheEnter.initialY) {
+                        createTop = touch.pageY;
+                        createHeight = cacheEnter.initialY - touch.pageY;
+                    } else {
+                        createTop = cacheEnter.initialY;
+                        createHeight = touch.pageY - cacheEnter.initialY;
+                    }
+                }
+
                 var cacheEnter = boxCache[touch.identifier];
                 if (cacheEnter && cacheEnter.creation) {
                     var createLeft, createTop, createWidth, createHeight;
@@ -78,23 +88,11 @@ $(function() {
                     if (touch.pageX < cacheEnter.initialX) {
                         createLeft = touch.pageX;
                         createWidth = cacheEnter.initialX - touch.pageX;
-                        if (touch.pageY < cacheEnter.initialY) {
-                        createTop = touch.pageY;
-                        createHeight = cacheEnter.initialY - touch.pageY;
-                    } else {
-                        createTop = cacheEnter.initialY;
-                        createHeight = touch.pageY - cacheEnter.initialY;
-                    }
+                        calculateY();
                     } else {
                         createLeft = cacheEnter.initialX;
                         createWidth = touch.pageX - cacheEnter.initialX;
-                        if (touch.pageY < cacheEnter.initialY) {
-                        createTop = touch.pageY;
-                        createHeight = cacheEnter.initialY - touch.pageY;
-                    } else {
-                        createTop = cacheEnter.initialY;
-                        createHeight = touch.pageY - cacheEnter.initialY;
-                    }
+                        calculateY();
                     }
 
                     cacheEnter.creation
