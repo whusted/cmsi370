@@ -79,7 +79,8 @@ $(function() {
                         touch.target.movingBox.addClass("delete-highlight");
                         touch.target.movingBox.addClass("shake");
                     }
-
+                    
+                    // Check if came back into drawing area
                     if (newX <= parentRight && newY <= parentBottom && newX >= parentLeft && newY >= parentTop) {
                         touch.target.movingBox.removeClass("delete-highlight");
                         touch.target.movingBox.removeClass("shake");
@@ -140,7 +141,7 @@ $(function() {
                 // Arbitrary minimum widths and heights for box creation
                 var minHeight = 25;
                 var minWidth = 25;
-                
+
                 var cacheEnter = boxCache[touch.identifier];
                 if (cacheEnter && cacheEnter.creation) {
                     var $creation = $(cacheEnter.creation);
