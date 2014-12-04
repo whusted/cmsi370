@@ -54,7 +54,8 @@ $(function() {
          */
         trackDrag: function (event) {
             $.each(event.changedTouches, function (index, touch) {
-                // Don't bother if we aren't tracking anything.
+
+                // Dimensions and details of box
                 if (touch.target.movingBox) {
                     var parentOfBox = $(touch.target.movingBox).parent(),
                         parentWidth = parentOfBox.width(),
@@ -71,6 +72,19 @@ $(function() {
                     });
 
                     // Check if outside drawing area and should be deleted
+                    var newX = touch.pageX - touch.target.deltaX;
+                    var newY = touch.pageY - touch.target.deltaY;
+
+                    if (newX > parentRight || newX < parentLeft || newY > parentBottom || newY < parentTop) {
+                        touch.target.movingBox.addClass("delete-highlight");
+                        touch.target.movingBox.addClass("shake");
+                    }
+
+                    if (newX <= parentRight && newY <= parentBottom && newX >= parentLeft && newY >= parentTop) {
+                        touch.target.movingBox.removeClass("delete-highlight");
+                        touch.target.movingBox.removeClass("shake");
+                    }
+                    
                 }
 
 
