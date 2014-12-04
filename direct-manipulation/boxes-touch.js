@@ -136,6 +136,18 @@ $(function() {
                     // touch.target.movingBox.
                     touch.target.movingBox = null;
                 }
+
+                // Arbitrary minimum widths and heights for box creation
+                var minHeight = 25;
+                var minWidth = 25;
+                
+                var cacheEnter = boxCache[touch.identifier];
+                if (cacheEnter && cacheEnter.creation) {
+                    var $creation = $(cacheEnter.creation);
+                    if ($creation.height() < minHeight ||  $creation.width() < minWidth) {
+                        $creation.remove();
+                    }
+                }
             });
         },
 
