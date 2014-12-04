@@ -144,6 +144,9 @@ $(function() {
          */
         unhighlight: function () {
             $(this).removeClass("box-highlight");
+            if ($(this).hasClass("delete-highlight")) {
+                $(this).remove();
+            }
         },
 
         /**
