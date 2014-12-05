@@ -2,9 +2,11 @@ $(function() {
     var LEFT_BUTTON = 1;
     var SLIDER_WIDTH = 500;
   window.Slider = {
+        // Begin value arbitrarily at 1
+        sliderValue: 1,
 
         setSliderButton: function (jQueryElements) {
-          var BUTTON_TEMPLATE = "<div class='slide-button' id='slide-button'></div>";
+          var BUTTON_TEMPLATE = "<div class='slide-button' id='slide-button'>" + this.sliderValue + "</div>";
           jQueryElements
             .addClass("slide")
             .css("width", SLIDER_WIDTH + "px")
@@ -15,7 +17,7 @@ $(function() {
 
         trackDrag: function (event) {
           if (event.which === LEFT_BUTTON) {
-              // Take note of the box's current (global) location.
+              // Take note of the current (global) location.
               var deltaX,
                   deltaY,
                   startOffset;
