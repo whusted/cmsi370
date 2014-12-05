@@ -57,16 +57,8 @@ $(function() {
                 tr.attr("id", character.id);
                 tr.find(".class").text(character.classType);
                 tr.find(".gender").text(character.gender);
-                if (character.level) { // JD: 11, 12
-                    tr.find(".level").text(character.level);
-                } else {
-                	tr.find(".level").text("1");
-                }
-                if (character.money) { // JD: 11, 12
-                	tr.find(".money").text(character.money);
-                } else {
-                	tr.find(".money").text("0");
-                }
+                character.level ? tr.find(".level").text(character.level) : tr.find(".level").text("1");
+                character.money ? tr.find(".money").text(character.money) : tr.find(".money").text("0");
                 return tr;
             }));
         }

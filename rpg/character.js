@@ -30,12 +30,16 @@ $(function () {
             "http://lmu-diabolical.appspot.com/characters/" + charId,
             function (character) {
                 // Do something with the character list.
-                // JD: 10
-                $("#nameInput").val(character.name);
-                $("#classInput").val(character.classType);
-                $("#genderInput").val(character.gender);
-                $("#levelInput").val(character.level);
-                $("#moneyInput").val(character.money);
+                [ 
+                    {selector: '#nameInput', property: 'name'},
+                    {selector: '#classInput', property: 'classType'},
+                    {selector: '#genderInput', property: 'gender'},
+                    {selector: '#levelInput', property: 'level'},
+                    {selector: '#moneyInput', property: 'money'}
+
+                ].forEach(function (spec) {
+                    $(spec.selector).val(character[spec.property]);
+                });
         });
     });
     
@@ -90,12 +94,16 @@ $(function () {
                 slot: "body"
             },
             function (item) {
-                // JD: 10
-                $("#absorption").text(item.absorption);
-                $("#atkspeed").text(item.atkspeed);
-                $("#blockchance").text(item.blockchance);
-                $("#critchance").text(item.critchance);
-                $("#defense").text(item.defense);
+                [
+                    {selector: '#absorption', property: 'absorption'},
+                    {selector: '#atkspeed', property: 'atkspeed'},
+                    {selector: '#blockchance', property: 'blockchance'},
+                    {selector: '#critchance', property: 'critchance'},
+                    {selector: '#defense', property: 'defense'},
+
+                ].forEach(function (spec) {
+                    $(spec.selector).text(item[spec.property]);
+                });
             }
         );
     });

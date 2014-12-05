@@ -5,8 +5,8 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
             <link rel="stylesheet" href="rpg.css">
             <link rel="stylesheet" href="slider.css">
-	</head>
-	<body>
+    </head>
+    <body>
         <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -19,7 +19,7 @@
                     <a class="navbar-brand" href="rpg.html">Home</a>
                 </div>
 
-                <div class="collapse navbar-collapse navbar-ex1-collapse"> <!-- JD: 6 -->
+                <div id="navBar">
                     <ul class="nav navbar-nav">
                         <li>
                             <a id="newChar" data-toggle="modal" data-target="#charModal" >
@@ -28,21 +28,21 @@
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
+            </div>
         </nav>
 
-		<!-- Modal -->
-		<div class="modal fade" id="charModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		    <div class="modal-dialog">
-		        <div class="modal-content">
-		            <div class="modal-header">
-		                <div class="text-center">
-                            <h4 class="modal-title" id="myModalLabel">Create New Character</h4> <!-- JD: 6 -->
+        <!-- Modal -->
+        <div class="modal fade" id="charModal" tabindex="-1" role="dialog" aria-labelledby="charModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="text-center">
+                            <h4 class="modal-title" id="newCharModal">Create New Character</h4>
                             <h5>A random character has been created for you. Click in the boxes to edit the fields, then hit "Create Character" to confirm!</h5>
                         </div>
-		            </div>
-			        <div class="modal-body">
-			            <form role="form">
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
                             <div class="form-group">
                                 <label>Name</label>
                                 <input class="form-control" id="nameInput" placeholder="Enter Name">
@@ -71,10 +71,10 @@
                             <button class="btn-lg btn-success" id="createCharacter">Create Character</button>
                             <button class="btn-lg btn-danger" data-dismiss="modal">Cancel</button>
                         </div>
-			        </div>
-		        </div>
-		    </div>
-		</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <h1 class="text-center padded">Welcome to myRPG</h1>
         <h4 class="text-center">To create a new character, click on "Create New Character" in the menu bar. To view an existing character, click on his or her name.</h4>
