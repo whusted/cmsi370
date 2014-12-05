@@ -6,16 +6,19 @@
   height: 10px; 
   left: 100px; 
   top: 100px;
+  margin-top: 20px;
   -moz-box-shadow:    inset 0 0 7px #000000;
   -webkit-box-shadow: inset 0 0 7px #000000;
   box-shadow:         inset 0 0 7px #000000;
+  position: relative;
 }
 
 .slide-button {
   border: thin solid black;
   background-color: #FFFFFF;
   width: 25px; 
-  height: 25px; 
-  left: 10px; 
-  top: 10px
+  height: 25px;
+  top: -8px;
+  left: 0px;
+  position: absolute;
 }
