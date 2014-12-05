@@ -1,9 +1,11 @@
-<html> <!-- JD: 4 -->
-	<head> <!-- JD: 3 -->
-		<tile>RPG</title>
-	</head>
-	
-    <!-- JD: 5 -->
+<!doctype htmL>
+    <html>
+        <head>
+            <tile>RPG</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+                <link rel="stylesheet" href="rpg.css">
+                <link rel="stylesheet" href="slider.css">
+    	</head>
 		<body>
             <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
                 <div class="container">
@@ -74,67 +76,57 @@
 			    </div>
 			</div>
 
-            <!-- JD: 5 -->
-                <h1 class="text-center padded">Welcome to myRPG</h1>
-                <h4 class="text-center">To create a new character, click on "Create New Character" in the menu bar. To view an existing character, click on his or her name.</h4>
-                <h3 class="text-center blue-text"><strong>Current Characters</strong></h3>
+            <h1 class="text-center padded">Welcome to myRPG</h1>
+            <h4 class="text-center">To create a new character, click on "Create New Character" in the menu bar. To view an existing character, click on his or her name.</h4>
+            <h3 class="text-center blue-text"><strong>Current Characters</strong></h3>
 
-                <!-- Loading dots -->
-                <div id="loadingDots" class="container2 hidden">
-                    <div class="loader">
-                        <div class="circle">&nbsp;</div>
-                        <div class="circle">&nbsp;</div>
-                        <div class="circle">&nbsp;</div>
-                        <div class="circle">&nbsp;</div>
-                    </div>
+            <!-- Loading dots -->
+            <div id="loadingDots" class="container2 hidden">
+                <div class="loader">
+                    <div class="circle">&nbsp;</div>
+                    <div class="circle">&nbsp;</div>
+                    <div class="circle">&nbsp;</div>
+                    <div class="circle">&nbsp;</div>
                 </div>
+            </div>
 
-
-            <!-- JD: 5 -->
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Gender</th>
-                                <th>Class</th>
-                                <th>Level</th>
-                                <th>Money</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                    <div class="templates hidden">
-                        <table>
-                            <tbody>
-                                <tr class="character-template">
-                                    <td>
-                                        <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Black-Widow-icon.png" class="avatar"/>
-                                    </td>
-                                    <td class="name"></td>
-                                    <td class="gender"></td>
-                                    <td class="class"></td>
-                                    <td class="level"></td>
-                                    <td class="money"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-			  
-		</body>
-
-    <!-- JD: 7 -->
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="rpg.css">
-    <link rel="stylesheet" href="slider.css">
-    <script src="slider.js"></script>
-	<script src="rpg.js"></script>
-    <script>
-        $(function () {
-            $("#slider").slider();
-        });
-    </script>
-</html>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Class</th>
+                        <th>Level</th>
+                        <th>Money</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="templates hidden">
+                <table>
+                    <tbody>
+                        <tr class="character-template">
+                            <td>
+                                <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/256/Avengers-Black-Widow-icon.png" class="avatar"/>
+                            </td>
+                            <td class="name"></td>
+                            <td class="gender"></td>
+                            <td class="class"></td>
+                            <td class="level"></td>
+                            <td class="money"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+            <script src="slider.js"></script>
+            <script src="rpg.js"></script>
+            <script>
+                $(function () {
+                    $("#slider").slider();
+                });
+            </script>
+        </body>
+    </html>
