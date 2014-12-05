@@ -8,7 +8,7 @@ $(function() {
                     {selector: '#classInput', property: 'classType'},
                     {selector: '#genderInput', property: 'gender'},
                     {selector: '#moneyInput', property: 'money'}
-                    
+
                 ].forEach(function (spec) {
                     $(spec.selector).val(character[spec.property]);
                 });
@@ -75,19 +75,7 @@ $(function() {
     /* Go to character's page on click */
     $("tbody").click(function(event) {
         var id = $(event.target).closest("tr").attr("id");
-        console.log(id);
         window.location.href = "character.html#" + id;
-    });
-
-    $("#getCharacterById").click(function() {
-        $.getJSON(
-            "http://lmu-diabolical.appspot.com/characters/" + id,
-            function (character) {
-                // Do something with the character.
-                // JD: 13
-                console.log(character);
-            }
-        );
     });
 
 });
