@@ -1,5 +1,4 @@
 $.fn.slider = function() {
-  console.log(this);
   var LEFT_BUTTON = 1;
   var SLIDER_WIDTH = 500;
   Slider = {
