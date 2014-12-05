@@ -19,19 +19,13 @@
         <!-- Code that is totally specific to this page. -->
         <script>
             $(function () {
-                
+              Slider.setSliderButton($("#slider"));
+              //$("#slider").slider();
             });
         </script>
     </head>
     
     <body>
-      <div id="slider-initialized">
-        <div class="slide inner-shadow"
-          style="width: 450px; height: 10px; left: 100px; top: 100px">
-        </div>
-        <div class="slide-button"
-          style="width: 20px; height: 20px; left: 100px; top: 100px">
-        </div>
-      </div>
+      <div id="slider"></div>
     </body>
 </html>
