@@ -40,7 +40,6 @@ $(function() {
                     });
                 $("#drawing-area").append(createdBox);
                 cacheEnter.creation = $("div div:last-child");
-                cacheEnter.creation.addClass("creation-highlight");
                 $("#drawing-area").find("div.box").each(function (index, element) {
                     element.addEventListener("touchstart", BoxesTouch.startMove, false);
                     element.addEventListener("touchend", BoxesTouch.unhighlight, false);
