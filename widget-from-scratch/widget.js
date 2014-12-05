@@ -1,7 +1,8 @@
-$(function() {
-    var LEFT_BUTTON = 1;
-    var SLIDER_WIDTH = 500;
-  window.Slider = {
+$.fn.slider = function() {
+  console.log(this);
+  var LEFT_BUTTON = 1;
+  var SLIDER_WIDTH = 500;
+  Slider = {
         // Begin value arbitrarily at 1
         sliderValue: 1,
 
@@ -52,6 +53,8 @@ $(function() {
           return this.sliderValue;
         }
           
-	}
+  }
 
-});
+  Slider.setSliderButton(this);
+
+};
