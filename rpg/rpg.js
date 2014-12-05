@@ -7,7 +7,6 @@ $(function() {
 		        $("#nameInput").val(character.name);
 	        	$("#classInput").val(character.classType);
 	        	$("#genderInput").val(character.gender);
-	        	$("#levelInput").val(character.level);
 	        	$("#moneyInput").val(character.money);
 		    }
 		);
@@ -17,7 +16,7 @@ $(function() {
 		var newName = $("#nameInput").val();
 		var newClassType = $("#classInput").val();
 		var newGender = $("#genderInput").val();
-		var newLevel = $("#levelInput").val();
+		var newLevel = $("#slider").children().text();
 		var newMoney = $("#moneyInput").val();
         $.ajax({
 		    type: 'POST',

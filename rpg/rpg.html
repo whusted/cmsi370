@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Level</label>
-                                    <input class="form-control" id="levelInput" placeholder="Enter Starting Level">
+                                    <div id="slider"></div>
                                 </div>
                                 <div class="form-group">
                                     <label>Money</label>
@@ -129,5 +129,12 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="rpg.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="slider.js"></script>
 	<script src="rpg.js"></script>
+    <script>
+        $(function () {
+            $("#slider").slider();
+        });
+    </script>
 </html>
