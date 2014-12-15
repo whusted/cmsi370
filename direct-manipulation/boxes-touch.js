@@ -24,7 +24,7 @@ $(function() {
         },
 
         startMake: function (event) {
-            $.each(event.changedTouches, function(index, touch) {
+            $.each(event.changedTouches, function(index, touch) { // JD: 3
                 var boxTemplate = '<div class="box"></div>';
                 var cacheEnter = {};
                 boxCache[touch.identifier] = cacheEnter;
@@ -38,7 +38,7 @@ $(function() {
                         left: touch.pageX + "px",
                         top: touch.pageY + "px"
                     });
-                $("#drawing-area").append(createdBox);
+                $("#drawing-area").append(createdBox); // JD: 4
                 cacheEnter.creation = $("div div:last-child");
                 $("#drawing-area").find("div.box").each(function (index, element) {
                     element.addEventListener("touchstart", BoxesTouch.startMove, false);
@@ -76,13 +76,13 @@ $(function() {
 
                     if (newX > parentRight || newX < parentLeft || newY > parentBottom || newY < parentTop) {
                         touch.target.movingBox.addClass("delete-highlight");
-                        touch.target.movingBox.addClass("shake");
+                        touch.target.movingBox.addClass("shake"); // JD: 5
                     }
                     
                     // Check if came back into drawing area
                     if (newX <= parentRight && newY <= parentBottom && newX >= parentLeft && newY >= parentTop) {
                         touch.target.movingBox.removeClass("delete-highlight");
-                        touch.target.movingBox.removeClass("shake");
+                        touch.target.movingBox.removeClass("shake"); // JD: 5
                     }
                     
                 }
@@ -138,8 +138,8 @@ $(function() {
                 }
 
                 // Arbitrary minimum widths and heights for box creation
-                var minHeight = 25;
-                var minWidth = 25;
+                var minHeight = 25; // JD: 6
+                var minWidth = 25; // JD: 6
 
                 var cacheEnter = boxCache[touch.identifier];
                 if (cacheEnter && cacheEnter.creation) {

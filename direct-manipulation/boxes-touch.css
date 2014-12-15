@@ -24,7 +24,7 @@
 }
 
 @-webkit-keyframes spaceboots {
-	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); } /* JD: 1 */
 	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
 	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
 	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
@@ -34,11 +34,11 @@
 	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
 	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
 	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
-	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
-}
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); } /* JD: 1 ...up to here */
+} /* JD: 2 */
 .shake:hover,
 .shake:focus {
-	-webkit-animation-name: spaceboots;
+	-webkit-animation-name: spaceboots; /* JD: 1 ...etc. */
 	-webkit-animation-duration: 0.8s;
 	-webkit-transform-origin:50% 50%;
 	-webkit-animation-iteration-count: infinite;
