@@ -1,3 +1,7 @@
+/** 
+    This is an updated version of Edward Bramanti's effort
+    at the same boxes challenge (https://github.com/jadengore)
+**/
 $(function() {
     var boxCache = {};
     window.BoxesTouch = {
@@ -24,7 +28,7 @@ $(function() {
         },
 
         startMake: function (event) {
-            $.each(event.changedTouches, function(index, touch) { // JD: 3
+            $.each(event.changedTouches, function (index, touch) {
                 var boxTemplate = '<div class="box"></div>';
                 var cacheEnter = {};
                 boxCache[touch.identifier] = cacheEnter;
@@ -76,13 +80,13 @@ $(function() {
 
                     if (newX > parentRight || newX < parentLeft || newY > parentBottom || newY < parentTop) {
                         touch.target.movingBox.addClass("delete-highlight");
-                        touch.target.movingBox.addClass("shake"); // JD: 5
+                        touch.target.movingBox.addClass("shake");
                     }
                     
                     // Check if came back into drawing area
                     if (newX <= parentRight && newY <= parentBottom && newX >= parentLeft && newY >= parentTop) {
                         touch.target.movingBox.removeClass("delete-highlight");
-                        touch.target.movingBox.removeClass("shake"); // JD: 5
+                        touch.target.movingBox.removeClass("shake");
                     }
                     
                 }
@@ -138,13 +142,13 @@ $(function() {
                 }
 
                 // Arbitrary minimum widths and heights for box creation
-                var minHeight = 25; // JD: 6
-                var minWidth = 25; // JD: 6
+                var MIN_HEIGHT = 25;
+                var MIN_WIDTH = 25;
 
                 var cacheEnter = boxCache[touch.identifier];
                 if (cacheEnter && cacheEnter.creation) {
                     var $creation = $(cacheEnter.creation);
-                    if ($creation.height() < minHeight ||  $creation.width() < minWidth) {
+                    if ($creation.height() < MIN_HEIGHT ||  $creation.width() < MIN_WIDTH) {
                         $creation.remove();
                     }
                 }
