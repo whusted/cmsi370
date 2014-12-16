@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <!-- Assorted iOS-related metadata. -->
+        <meta name="viewport" content="width=device-width" />
+
+        <title>Slider</title>
+        <link rel="stylesheet" type="text/css" href="slider.css"/>
+
+        <!-- Load up jQuery first. -->
+        <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+
+        <!-- Load up the controller code. -->
+        <script src="slider.js"></script>
+        
+        <!-- Code that is totally specific to this page. -->
+        <script>
+            $(function () {
+              $("#slider").slider();
+            });
+        </script>
+    </head>
+    
+    <body>
+      <div id="slider" style="left: 100px; top: 100px;"></div>
+    </body>
+</html>
