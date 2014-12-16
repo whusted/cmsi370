@@ -19,7 +19,6 @@ $(function() {
 
           trackDrag: function (event) {
             var sliderLeft = $("#slider").offset().left;
-            console.log(sliderLeft);
             
             if (event.which === LEFT_BUTTON) {
                 // Take note of the current (global) location.
@@ -49,7 +48,6 @@ $(function() {
             this.sliderLeft = $("#slider").offset().left;
             if (event.which === LEFT_BUTTON) {
               // Keep slider button on slider
-              console.log(this.sliderLeft);
               if (Slider.withinBounds(event, this.sliderLeft)) {
                 $(".slide-button").offset({
                   left: event.pageX - this.deltaX
